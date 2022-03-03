@@ -35,7 +35,6 @@ pinkStar= loadImage ("images/pinkStar3.png")
 function setup() {
 
   createCanvas(windowWidth,windowHeight);
-  rectMode(CENTER);
   imageMode(CENTER);
 
 
@@ -43,8 +42,8 @@ function setup() {
 }
 
 //add 10 x,y postions to arrays
-	for(let x =0; x<windowWidth; x+=stepX){
-		for(let y = 0; y<windowHeight; y+=stepY){
+	for(let x =10; x<windowWidth; x+=stepX){
+		for(let y =10; y<windowHeight; y+=stepY){
 		xArray.push(x);
 		yArray.push(y);
 	}
@@ -72,7 +71,7 @@ background(0);
 
 image (star,windowWidth/2,windowHeight/2,160,160)
 image(star, windowWidth/4,windowHeight/2,160,160)
-image(star, windowWidth/6,windowHeight/2,160,160)
+image(star, windowWidth/9,windowHeight/2,160,160)
 image(star, windowWidth/80,windowHeight/2,160,160)
 
   }

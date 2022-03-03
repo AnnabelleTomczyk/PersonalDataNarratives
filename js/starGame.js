@@ -39,32 +39,32 @@ fill(255);
 textSize(40);
 text("Stars Caught:"+ starsCaught + "00",windowWidth/2,100)
 
-image(net, mouseX,mouseY,70,90)
+image(net,mouseX,mouseY,70,90)
 
 
 
-mouseCollide= dist(starX, starY, starX, starY)
+mouseCollide= dist(mouseX, mouseY, starX, starY)
 //changing speed of the star
 starX = starX + starX;
 starY = starY + starSpeedY;
 
 //reverse course of the star
-if(starX >= windowWidth-10 || starX<= 10){
-  starSpeedX = starSpeedX * -.5
-
+if(starX >= windowWidth-.5 || starX<= -.5){
+  starSpeedX = starSpeedX * -1
+ print("change x speed")
 }
 
-if(starY >= windowHeight-10 || starY <= 10){
-  starspeedY = starSpeedY * -.5
-
+if(starY >= windowHeight-.5 || starY <= -.5){
+  starspeedY = starSpeedY * -1
+    print ("change y speed")
 }
 
-if (mouseCollide < 10){
+if (mouseCollide < .5){
   starsCaught ++;
-  starX = random(10,windowWidth-10)
-  starY = random(10,windowHeight-10)
-  starSpeedX=starSpeedX * .5;
-  starSpeedY=starSpeedY * .5;
+  starX = random(.5,windowWidth-.5)
+  starY = random(.5,windowHeight-.5)
+  starSpeedX=starSpeedX * 1.5;
+  starSpeedY=starSpeedY * 1.5;
 
 
 }
