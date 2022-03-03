@@ -16,9 +16,9 @@ let bg;
 
 
 function preload(){
-star= loadImage("images/star.png");
-net= loadImage ("images/net.png");
-bg= loadImage("images/galaxy2.jpg")
+star= loadImage("Images/star.png");
+net= loadImage ("Images/net.png");
+bg= loadImage("Images/galaxy2.jpg")
 
 
 }
